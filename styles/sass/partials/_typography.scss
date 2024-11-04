@@ -1,0 +1,179 @@
+@use 'variables' as *;
+
+// font import
+@font-face {
+  font-family: "Goudy-Bookletter";
+  src: url(/assets/fonts/Goudy_Bookletter_1911/GoudyBookletter1911-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+
+// font import
+@font-face {
+  font-family: "Tajawal";
+  src: url(/assets/fonts/Tajawal/Tajawal-Medium.ttf) format("truetype");
+  font-display: swap;
+}
+
+// font variables
+$font1: 'Goudy-Bookletter',
+serif;
+$font2: 'Goudy-Bookletter',
+sans-serif;
+$font3: 'Tajawal',
+sans-serif;
+
+a {
+  font-size: 1.5rem;
+  color: $black;
+  font-style: normal;
+
+  &:hover {
+    transition: color 1s, font-style 1s;
+    font-style: italic;
+    color: $color1;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    font-style: italic;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+hr {
+  background-color: rgba($color1, 0.8);
+  border-style: solid;
+  border-color: rgba($color1, 0.8);
+  border-width: 2px;
+  box-shadow: none;
+  width: 1000px;
+  width: 90%;
+}
+
+input, textarea, label {
+  font-family: $font3;
+}
+
+body {
+  font-family: $font1;
+  letter-spacing: 0.4px;
+  font-size: 18px;
+  font-weight: 400;
+  color: $black;
+  a {
+    color: $black;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
+
+.button {
+  font-family: $font3;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: $white;
+}
+
+header {
+  padding-top: 10px;
+  .heading {
+    text-align: center;
+    h1 {
+        font-size: 10rem;
+        font-weight: 400;
+        color: $color1;
+      }
+  }
+}
+
+.about {
+  margin-bottom: 50px;
+  h2 {
+    padding: 5px;
+    padding-bottom: 30px;
+    padding-top: 0;
+    margin: 0;
+    font-family: $font2;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .cv-download {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    display: block;
+  }
+  p {
+    font-family: $font3;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 0;
+    line-height: 1.75;
+  }
+}
+
+footer {
+  color: $white;
+  font-family: $font3;
+  font-weight: 400;
+
+  a {
+    font-size: 1.1rem;
+    color: $white;
+
+    &:hover {
+      color: rgba($white, 0.5);
+    }
+  }
+}
+
+// responsive to tablet
+@media only screen and (max-width: $tablet) {
+  header {
+    .heading {
+      h1 {
+        font-size: 8rem;
+      }
+    }
+  }
+}
+
+// responsive to mobile
+@media only screen and (max-width: $mobile) {
+  header {
+    .heading {
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+  .about {
+    p {
+      font-size: 1.05rem;
+      margin: 0;
+      padding-bottom: 20px;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  footer {
+    a:hover {
+      color: $white;
+    }
+    p, a {
+      font-size: 1.1rem;
+    }
+    p {
+      max-width: 95%;
+      margin: 0 auto;
+    }
+  }
+}
