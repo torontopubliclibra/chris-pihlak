@@ -4,7 +4,8 @@
 @use 'partials/typography' as *;
 
 html { 
-    background-image: url('/assets/2147786544-2.png');
+    background-color: $white;
+    // background-image: url('/assets/2147786544-2.png');
     background-size: cover;
 }
 
@@ -34,13 +35,46 @@ textarea {
 
 .about {
     margin: 0;
+    padding-top: 20px;
     padding-bottom: 30px;
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        @media only screen and (max-width: $mobile) {
+            flex-direction: column;
+        }
+    }
+
+    .about-content {
+        width: 60%;
+
+        @media only screen and (max-width: $mobile) {
+            padding: 20px;
+            padding-top: 0;
+            width: 100%;
+        }
+    }
 }
 
 .headshot {
-    border: solid rgba($color1, 0.8) 10px;
-    width: 80%;
-    max-width: 400px;
+    width: 40%;
+    height: auto;
+    padding: 20px 0;
+    padding-top: 0;
+
+    img {
+        border: solid rgba($color1, 0.5) 10px;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: $mobile) {
+        padding: 20px;
+        padding-top: 0;
+        width: 100%;
+    }
 }
 
 // wrapper styles
@@ -72,7 +106,6 @@ textarea {
         justify-content: center;
         align-items: center;
         width: 300px;
-        height: 50px;
         margin-bottom: 10px;
 
         img {
@@ -89,24 +122,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 20px 0;
     .title {
         width: 100%;
         max-width: 1260px;
-        .heading {
-            h1, h2 {
-                padding: 0;
-                margin: 0;
-            }
-            h2 {
-                padding: 15px 20px;
-                border-bottom: solid $color1 3px;
-
-                @media only screen and (max-width: $mobile) {
-                    padding: 15px 0;
-                }
-            }
-        }
-        padding: 30px 0;
+        padding-top: 10px;
     }
 }
 
@@ -115,7 +135,7 @@ section {
 }
 
 footer {
-    background-color: rgba($color1, 0.9);
+    background-color: rgba($color2, 0.75);
     padding: 40px 0;
     .wrapper {
         display: flex;
@@ -136,6 +156,7 @@ footer {
         width: 95%;
     }
     header {
+        margin: 0;
         .title {
             width: 100%;
         }

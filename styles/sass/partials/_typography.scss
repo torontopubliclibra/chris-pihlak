@@ -2,28 +2,26 @@
 
 // font import
 @font-face {
-  font-family: "Goudy-Bookletter";
-  src: url(/assets/fonts/Goudy_Bookletter_1911/GoudyBookletter1911-Regular.ttf) format("truetype");
-  font-display: swap;
-}
-
-// font import
-@font-face {
-  font-family: "Tajawal";
-  src: url(/assets/fonts/Tajawal/Tajawal-Medium.ttf) format("truetype");
+  font-family: "Crimson Pro";
+  src: url(/assets/fonts/Crimson_Pro/CrimsonPro-VariableFont_wght.ttf) format("truetype");
   font-display: swap;
 }
 
 // font variables
-$font1: 'Goudy-Bookletter',
+$font1: 'Crimson Pro',
 serif;
-$font2: 'Goudy-Bookletter',
-sans-serif;
-$font3: 'Tajawal',
-sans-serif;
+
+html {
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 16px;
+  }
+}
 
 a {
-  font-size: 1.5rem;
   color: $black;
   font-style: normal;
 
@@ -52,31 +50,26 @@ hr {
 }
 
 input, textarea, label {
-  font-family: $font3;
+  font-family: $font1;
 }
 
 body {
+  font-size: 1rem;
   font-family: $font1;
-  letter-spacing: 0.4px;
-  font-size: 18px;
-  font-weight: 400;
   color: $black;
   a {
     color: $black;
-  }
-
-  @media only screen and (max-width: $tablet) {
-    font-size: 16px;
   }
 }
 
 h1, h2, h3, h4 {
   font-weight: 500;
+  padding: 0;
+  margin: 0;
 }
 
 .button {
-  font-family: $font3;
-  font-size: 1.2rem;
+  font-family: $font1;
   text-decoration: none;
   color: $white;
 }
@@ -86,33 +79,33 @@ header {
   .heading {
     text-align: center;
     h1 {
-        font-size: 10rem;
-        font-weight: 400;
-        color: $color1;
-      }
+      font-size: 8rem;
+      font-weight: 400;
+      color: $color1;
+      line-height: 0.9;
+    }
+    h2 {
+      padding: 20px;
+      padding-bottom: 0;
+      font-style: italic;
+      font-family: $font1;
+      font-size: 1.75rem;
+      font-weight: 400;
+    }
   }
 }
 
 .about {
   margin-bottom: 50px;
-  h2 {
-    padding: 5px;
-    padding-bottom: 30px;
-    padding-top: 0;
-    margin: 0;
-    font-family: $font2;
-    font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 1;
-  }
   .cv-download {
-    padding-top: 10px;
-    padding-bottom: 25px;
+    color: $black;
+    background-color: rgba($color2, 0.75);
+    margin: 0 auto;
     display: block;
+    max-width: 350px;
   }
-  p {
-    font-family: $font3;
-    font-size: 1.2rem;
+  p, a {
+    font-family: $font1;
     padding: 10px;
     margin: 0;
     line-height: 1.75;
@@ -120,16 +113,15 @@ header {
 }
 
 footer {
-  color: $white;
-  font-family: $font3;
+  color: $black;
+  font-family: $font1;
   font-weight: 400;
 
   a {
-    font-size: 1.1rem;
-    color: $white;
+    color: $black;
 
     &:hover {
-      color: rgba($white, 0.5);
+      color: $color1;
     }
   }
 }
@@ -139,7 +131,7 @@ footer {
   header {
     .heading {
       h1 {
-        font-size: 8rem;
+        font-size: 6rem;
       }
     }
   }
@@ -150,26 +142,24 @@ footer {
   header {
     .heading {
       h1 {
-        font-size: 5rem;
+        font-size: 4rem;
+      }
+      h2 {
+        padding: 20px;
+        padding-bottom: 5px;
+        font-size: 1.5rem;
       }
     }
   }
   .about {
     p {
-      font-size: 1.05rem;
       margin: 0;
       padding-bottom: 20px;
-    }
-    h2 {
-      font-size: 2rem;
     }
   }
   footer {
     a:hover {
-      color: $white;
-    }
-    p, a {
-      font-size: 1.1rem;
+      color: $black;
     }
     p {
       max-width: 95%;

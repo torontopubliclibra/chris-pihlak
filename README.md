@@ -1,7 +1,7 @@
-# Chris Pihlak
+# Chris Aino Pihlak
 
 ## About
-This is a website for Chris Pihlak built with jQuery, HTML, and SCSS.
+This is a website for Chris Aino Pihlak built with jQuery, HTML, and SCSS.
 
 ## Development
 The site was designed by [Dana Teagle](https://danateagle.com) in 2024.

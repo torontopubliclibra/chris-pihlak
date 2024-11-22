@@ -256,24 +256,29 @@ hr, p, img, ul, li, a, blockquote, form, input, textarea, button, label, select,
 }
 
 @font-face {
-  font-family: "Goudy-Bookletter";
-  src: url(/assets/fonts/Goudy_Bookletter_1911/GoudyBookletter1911-Regular.ttf) format("truetype");
+  font-family: "Crimson Pro";
+  src: url(/assets/fonts/Crimson_Pro/CrimsonPro-VariableFont_wght.ttf) format("truetype");
   font-display: swap;
 }
-@font-face {
-  font-family: "Tajawal";
-  src: url(/assets/fonts/Tajawal/Tajawal-Medium.ttf) format("truetype");
-  font-display: swap;
+html {
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
 }
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 a {
-  font-size: 1.5rem;
   color: #28272A;
   font-style: normal;
 }
 a:hover {
   transition: color 1s, font-style 1s;
   font-style: italic;
-  color: #6d597a;
+  color: #775b79;
 }
 @media only screen and (max-width: 768px) {
   a {
@@ -285,9 +290,9 @@ a:hover {
 }
 
 hr {
-  background-color: rgba(109, 89, 122, 0.8);
+  background-color: rgba(119, 91, 121, 0.8);
   border-style: solid;
-  border-color: rgba(109, 89, 122, 0.8);
+  border-color: rgba(119, 91, 121, 0.8);
   border-width: 2px;
   box-shadow: none;
   width: 1000px;
@@ -295,34 +300,28 @@ hr {
 }
 
 input, textarea, label {
-  font-family: "Tajawal", sans-serif;
+  font-family: "Crimson Pro", serif;
 }
 
 body {
-  font-family: "Goudy-Bookletter", serif;
-  letter-spacing: 0.4px;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Crimson Pro", serif;
   color: #28272A;
 }
 body a {
   color: #28272A;
 }
-@media only screen and (max-width: 970px) {
-  body {
-    font-size: 16px;
-  }
-}
 
 h1, h2, h3, h4 {
   font-weight: 500;
+  padding: 0;
+  margin: 0;
 }
 
 .button {
-  font-family: "Tajawal", sans-serif;
-  font-size: 1.2rem;
+  font-family: "Crimson Pro", serif;
   text-decoration: none;
-  color: #d6cfcb;
+  color: #dcd7dd;
 }
 
 header {
@@ -332,72 +331,69 @@ header .heading {
   text-align: center;
 }
 header .heading h1 {
-  font-size: 10rem;
+  font-size: 8rem;
   font-weight: 400;
-  color: #6d597a;
+  color: #775b79;
+  line-height: 0.9;
+}
+header .heading h2 {
+  padding: 20px;
+  padding-bottom: 0;
+  font-style: italic;
+  font-family: "Crimson Pro", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
 }
 
 .about {
   margin-bottom: 50px;
 }
-.about h2 {
-  padding: 5px;
-  padding-bottom: 30px;
-  padding-top: 0;
-  margin: 0;
-  font-family: "Goudy-Bookletter", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1;
-}
 .about .cv-download {
-  padding-top: 10px;
-  padding-bottom: 25px;
+  color: #28272A;
+  background-color: rgba(255, 119, 88, 0.75);
+  margin: 0 auto;
   display: block;
+  max-width: 350px;
 }
-.about p {
-  font-family: "Tajawal", sans-serif;
-  font-size: 1.2rem;
+.about p, .about a {
+  font-family: "Crimson Pro", serif;
   padding: 10px;
   margin: 0;
   line-height: 1.75;
 }
 
 footer {
-  color: #d6cfcb;
-  font-family: "Tajawal", sans-serif;
+  color: #28272A;
+  font-family: "Crimson Pro", serif;
   font-weight: 400;
 }
 footer a {
-  font-size: 1.1rem;
-  color: #d6cfcb;
+  color: #28272A;
 }
 footer a:hover {
-  color: rgba(214, 207, 203, 0.5);
+  color: #775b79;
 }
 
 @media only screen and (max-width: 970px) {
   header .heading h1 {
-    font-size: 8rem;
+    font-size: 6rem;
   }
 }
 @media only screen and (max-width: 768px) {
   header .heading h1 {
-    font-size: 5rem;
+    font-size: 4rem;
+  }
+  header .heading h2 {
+    padding: 20px;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
   }
   .about p {
-    font-size: 1.05rem;
     margin: 0;
     padding-bottom: 20px;
   }
-  .about h2 {
-    font-size: 2rem;
-  }
   footer a:hover {
-    color: #d6cfcb;
-  }
-  footer p, footer a {
-    font-size: 1.1rem;
+    color: #28272A;
   }
   footer p {
     max-width: 95%;
@@ -405,7 +401,7 @@ footer a:hover {
   }
 }
 html {
-  background-image: url("/assets/2147786544-2.png");
+  background-color: #dcd7dd;
   background-size: cover;
 }
 
@@ -422,7 +418,7 @@ body {
 }
 
 input, textarea {
-  background-color: #d6cfcb;
+  background-color: #dcd7dd;
   border: none;
   padding: 10px 15px;
 }
@@ -433,13 +429,46 @@ textarea {
 
 .about {
   margin: 0;
+  padding-top: 20px;
   padding-bottom: 30px;
+}
+.about .wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .about .wrapper {
+    flex-direction: column;
+  }
+}
+.about .about-content {
+  width: 60%;
+}
+@media only screen and (max-width: 768px) {
+  .about .about-content {
+    padding: 20px;
+    padding-top: 0;
+    width: 100%;
+  }
 }
 
 .headshot {
-  border: solid rgba(109, 89, 122, 0.8) 10px;
-  width: 80%;
-  max-width: 400px;
+  width: 40%;
+  height: auto;
+  padding: 20px 0;
+  padding-top: 0;
+}
+.headshot img {
+  border: solid rgba(119, 91, 121, 0.5) 10px;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .headshot {
+    padding: 20px;
+    padding-top: 0;
+    width: 100%;
+  }
 }
 
 .wrapper {
@@ -451,7 +480,7 @@ textarea {
 .button {
   font-style: normal;
   color: #28272A;
-  background-color: rgba(214, 207, 203, 0.8);
+  background-color: rgba(220, 215, 221, 0.8);
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.5s, font-style 0.5s;
@@ -470,7 +499,6 @@ textarea {
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: 50px;
   margin-bottom: 10px;
 }
 .button.scroll-to-top img {
@@ -478,38 +506,26 @@ textarea {
 }
 
 header {
-  background-color: rgba(214, 207, 203, 0.9);
+  background-color: rgba(220, 215, 221, 0.9);
   height: auto;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 20px 0;
 }
 header .title {
   width: 100%;
   max-width: 1260px;
-  padding: 30px 0;
-}
-header .title .heading h1, header .title .heading h2 {
-  padding: 0;
-  margin: 0;
-}
-header .title .heading h2 {
-  padding: 15px 20px;
-  border-bottom: solid #6d597a 3px;
-}
-@media only screen and (max-width: 768px) {
-  header .title .heading h2 {
-    padding: 15px 0;
-  }
+  padding-top: 10px;
 }
 
 section {
-  background-color: rgba(214, 207, 203, 0.9);
+  background-color: rgba(220, 215, 221, 0.9);
 }
 
 footer {
-  background-color: rgba(109, 89, 122, 0.9);
+  background-color: rgba(255, 119, 88, 0.75);
   padding: 40px 0;
 }
 footer .wrapper {
@@ -526,6 +542,9 @@ footer .wrapper p {
 @media only screen and (max-width: 768px) {
   .wrapper {
     width: 95%;
+  }
+  header {
+    margin: 0;
   }
   header .title {
     width: 100%;
