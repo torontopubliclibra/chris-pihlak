@@ -6,7 +6,8 @@
 // global styles
 html { 
     background-color: $white;
-    background-size: cover;
+    background-image: url('../../assets/bg.png');
+    background-blend-mode: luminosity;
 }
 
 // body styles
@@ -30,7 +31,6 @@ body {
 
 // header styles
 header {
-    border-bottom: solid rgba($color1, 0.2) 2px;
     background-color: rgba($color1, 0.2);
     height: 125px;
     display: flex;
@@ -58,11 +58,12 @@ header {
         padding: 0;
 
         .banner {
+            padding: 25px;
             flex-direction: column-reverse;
 
             h1 {
                 order: 6;
-                padding-bottom: 20px;
+                padding-bottom: 10px;
             }
         }
     }
@@ -70,7 +71,6 @@ header {
 
 // footer styles
 footer {
-    border-top: solid rgba($color1, 0.2) 2px;
     background-color: rgba($color1, 0.2);
     height: 75px;
     padding: 0 40px;
@@ -104,7 +104,6 @@ footer {
 
 // main styles
 main {
-    background-color: rgba($white, 0.9);
     box-shadow: rgba($black, 0.1) 5px 0px 20px 5px inset;
     display: flex;
     flex-flow: row wrap;
@@ -151,7 +150,6 @@ main {
 
     img {
         box-shadow: rgba($black, 0.1) 0px 2px 4px 0px, rgba($black, 0.2) 0px 2px 16px 0px;
-        border: solid rgba($color1, 0.3) 3px;
         border-radius: 20px;
         object-fit: cover;
         width: 100%;

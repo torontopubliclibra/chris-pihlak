@@ -395,7 +395,8 @@ main p:last-of-type {
 
 html {
   background-color: #FDFCFD;
-  background-size: cover;
+  background-image: url("../../assets/bg.png");
+  background-blend-mode: luminosity;
 }
 
 body {
@@ -416,7 +417,6 @@ body {
 }
 
 header {
-  border-bottom: solid rgba(167, 120, 171, 0.2) 2px;
   background-color: rgba(167, 120, 171, 0.2);
   height: 125px;
   display: flex;
@@ -446,16 +446,16 @@ header .banner {
     padding: 0;
   }
   header .banner {
+    padding: 25px;
     flex-direction: column-reverse;
   }
   header .banner h1 {
     order: 6;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 }
 
 footer {
-  border-top: solid rgba(167, 120, 171, 0.2) 2px;
   background-color: rgba(167, 120, 171, 0.2);
   height: 75px;
   padding: 0 40px;
@@ -486,7 +486,6 @@ footer .wrapper .counter {
 }
 
 main {
-  background-color: rgba(253, 252, 253, 0.9);
   box-shadow: rgba(40, 39, 42, 0.1) 5px 0px 20px 5px inset;
   display: flex;
   flex-flow: row wrap;
@@ -532,7 +531,6 @@ main .wrapper .about-content p {
 }
 .headshot img {
   box-shadow: rgba(40, 39, 42, 0.1) 0px 2px 4px 0px, rgba(40, 39, 42, 0.2) 0px 2px 16px 0px;
-  border: solid rgba(167, 120, 171, 0.3) 3px;
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
