@@ -261,23 +261,35 @@ hr, p, img, ul, li, a, blockquote, form, input, textarea, button, label, select,
   font-display: swap;
 }
 @font-face {
-  font-family: "Motterdam";
-  src: url(/assets/fonts/Motterdam/Motterdam.ttf) format("truetype");
+  font-family: "Fraunces";
+  src: url(/assets/fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format("truetype");
   font-display: swap;
 }
 html {
   font-size: 20px;
-  letter-spacing: 0.4px;
   font-weight: 400;
 }
 @media only screen and (max-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
-input, textarea, label {
-  font-family: "Crimson Pro", serif;
+a {
+  font-style: normal;
+  color: #28272A;
+  transition: color 1s, font-style 1s;
+}
+a:hover {
+  font-style: italic;
+  transition: color 1s, font-style 1s;
+  color: #c05b6f;
+}
+@media only screen and (max-width: 768px) {
+  a:hover {
+    color: #28272A;
+    font-style: normal;
+  }
 }
 
 body {
@@ -291,58 +303,44 @@ body a {
 }
 
 h1, h2, h3, h4 {
+  font-family: "Fraunces", serif;
   font-weight: 500;
   padding: 0;
   margin: 0;
 }
 
-.button {
-  font-size: 1rem;
-  text-align: center;
-  font-family: "Crimson Pro", serif;
-  text-decoration: none;
-  color: #f4e8e5;
-}
-
-header .heading h1 {
-  font-family: "Motterdam", serif;
-  font-size: 6rem;
-  font-weight: 400;
+h1 {
   color: #28272A;
+  font-size: 1.8rem;
   line-height: 0.9;
-  margin-top: 20px;
 }
-header .heading h2 {
-  color: #805475;
-  padding: 20px 0;
-  padding-bottom: 0;
-  font-style: italic;
-  font-family: "Crimson Pro", serif;
-  font-size: 2rem;
-  font-weight: 400;
+@media only screen and (max-width: 970px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
-header .heading h3 {
-  color: #805475;
-  padding: 20px 0;
-  padding-bottom: 0;
-  font-style: italic;
-  font-family: "Crimson Pro", serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
 }
 
-.about {
-  margin-bottom: 50px;
-}
-.about p {
-  font-family: "Crimson Pro", serif;
-  padding: 0;
+h2 {
   padding-bottom: 20px;
-  margin: 0;
-  line-height: 1.75;
+  font-style: italic;
+  font-size: 1.5rem;
 }
-.about p:last-of-type {
-  padding-bottom: 0;
+@media only screen and (max-width: 970px) {
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
 }
 
 footer {
@@ -352,42 +350,24 @@ footer {
   font-size: 0.9rem;
 }
 
+main p {
+  font-family: "Crimson Pro", serif;
+  padding: 0;
+  padding-bottom: 20px;
+  margin: 0;
+  line-height: 1.75;
+}
+main p:last-of-type {
+  padding-bottom: 0;
+}
 @media only screen and (max-width: 970px) {
-  header .heading h1 {
-    font-size: 6rem;
+  main p {
+    text-align: center;
   }
 }
-@media only screen and (max-width: 768px) {
-  header .heading h1 {
-    font-size: 4rem;
-    padding: 0 20px;
-  }
-  header .heading h2 {
-    padding: 20px;
-    padding-bottom: 15px;
-    font-size: 1.5rem;
-  }
-  header .heading h3 {
-    padding: 0 20px;
-    font-size: 1.25rem;
-  }
-  .about p {
-    margin: 0;
-    padding-bottom: 20px;
-  }
-  .about p:last-of-type {
-    padding-bottom: 0;
-  }
-  footer a:hover {
-    color: #28272A;
-  }
-  footer p {
-    max-width: 95%;
-    margin: 0 auto;
-  }
-}
+
 html {
-  background-color: #f4e8e5;
+  background-color: #fff;
   background-size: cover;
 }
 
@@ -396,154 +376,28 @@ body {
   width: 100%;
   max-width: 100vw;
 }
-@media only screen and (max-width: 970px) {
-  body.nav-open {
-    overflow-y: hidden;
-  }
-}
-
-input, textarea {
-  background-color: #f4e8e5;
-  border: none;
-  padding: 10px 15px;
-}
-
-textarea {
-  height: 150px;
-}
-
-.about {
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 30px;
-}
-@media only screen and (max-width: 768px) {
-  .about {
-    padding-top: 0;
-  }
-}
-.about .wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-@media only screen and (max-width: 768px) {
-  .about .wrapper {
-    flex-direction: column;
-  }
-}
-.about .about-content {
-  width: 60%;
-}
-@media only screen and (max-width: 768px) {
-  .about .about-content {
-    padding: 20px;
-    padding-top: 0;
-    padding-bottom: 0;
-    width: 100%;
-  }
-}
-.about .about-content hr {
-  background: none;
-  border: dashed #28272A 2px;
-  width: 100%;
-  margin: 10px 0;
-  padding: 0;
-  margin-bottom: 25px;
-}
-
-.headshot {
-  width: 40%;
-  height: auto;
-  padding: 20px 0;
-  padding-top: 0;
-}
-.headshot img {
-  box-shadow: rgba(40, 39, 42, 0.12) 0px 2px 4px 0px, rgba(40, 39, 42, 0.32) 0px 2px 16px 0px;
-  width: 100%;
-}
-@media only screen and (max-width: 768px) {
-  .headshot {
-    padding: 20px;
-    padding-top: 0;
-    width: 100%;
-  }
-}
 
 .wrapper {
   max-width: 1260px;
   width: 90%;
   margin: 0 auto;
 }
-
-.button {
-  align-items: center;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: rgba(128, 84, 117, 0.15);
-  border-width: 0;
-  box-shadow: rgba(40, 39, 42, 0.4) 0 2px 4px, rgba(40, 39, 42, 0.3) 0 7px 13px -3px, rgba(128, 84, 117, 0.05) 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #28272A;
-  cursor: pointer;
-  display: inline-flex;
-  height: 48px;
-  justify-content: center;
-  font-size: 0.9rem;
-  line-height: 1;
-  font-weight: 500;
-  list-style: none;
-  overflow: hidden;
-  padding: 5px 30px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow 0.4s, transform 0.4s;
-  -moz-user-select: none;
-       user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow, transform;
-  gap: 10px;
-}
-.button:focus {
-  box-shadow: rgba(128, 84, 117, 0.05) 0 0 0 1.5px inset, rgba(40, 39, 42, 0.4) 0 2px 4px, rgba(40, 39, 42, 0.3) 0 7px 13px -3px, rgba(128, 84, 117, 0.25) 0 -3px 0 inset;
-}
-.button:hover {
-  box-shadow: rgba(40, 39, 42, 0.4) 0 4px 8px, rgba(40, 39, 42, 0.3) 0 7px 13px -3px, rgba(128, 84, 117, 0.05) 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
-.button:active {
-  box-shadow: rgba(40, 39, 42, 0.4) 0 2px 4px, rgba(40, 39, 42, 0.3) 0 7px 13px -3px, rgba(128, 84, 117, 0.05) 0 -3px 0 inset;
-  transform: translateY(2px);
-}
-.button .icon {
-  width: 18px;
-}
 @media only screen and (max-width: 768px) {
-  .button {
-    padding: 5px 20px;
-  }
-  .button .button-label {
-    display: none;
+  .wrapper {
+    width: 95%;
   }
 }
 
 header {
-  background-color: rgba(244, 232, 229, 0.9);
-  height: auto;
-  height: auto;
+  background-color: rgba(167, 120, 171, 0.15);
+  height: 125px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
 }
 header .banner {
-  background-color: rgba(128, 84, 117, 0.15);
-  box-shadow: rgba(40, 39, 42, 0.12) 0px 2px 4px 0px, rgba(40, 39, 42, 0.32) 0px 2px 16px 0px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -551,49 +405,102 @@ header .banner {
   gap: 20px;
   width: 100%;
   padding: 40px;
-  margin-bottom: 40px;
+  margin: 0;
 }
 @media only screen and (max-width: 768px) {
   header .banner {
     justify-content: space-between;
   }
 }
-header .title {
-  width: 100%;
-  max-width: 1260px;
-  padding-top: 10px;
-  margin: 0;
-}
-
-section {
-  background-color: rgba(244, 232, 229, 0.9);
+@media only screen and (max-width: 970px) {
+  header {
+    height: auto;
+    padding: 10px;
+  }
+  header .banner {
+    flex-direction: column-reverse;
+  }
+  header .banner h1 {
+    order: 6;
+    padding-bottom: 20px;
+  }
 }
 
 footer {
-  padding: 40px;
+  background-color: rgba(167, 120, 171, 0.15);
+  height: 75px;
+  padding: 0 40px;
 }
 footer .wrapper {
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
 footer .wrapper p {
   margin: 0;
 }
-footer .button {
-  margin-bottom: 20px;
+@media only screen and (max-width: 970px) {
+  footer {
+    height: auto;
+    padding: 40px;
+  }
+  footer .wrapper {
+    flex-direction: column;
+  }
 }
 
-@media only screen and (max-width: 768px) {
-  .wrapper {
-    width: 95%;
+main {
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+}
+@media only screen and (max-width: 970px) {
+  main {
+    flex-direction: column;
   }
-  header {
-    margin: 0;
-  }
-  header .title {
+}
+main .wrapper {
+  width: 60%;
+  height: calc(100vh - 200px);
+  overflow-y: scroll;
+  justify-content: center;
+  gap: 25px;
+}
+@media only screen and (max-width: 970px) {
+  main .wrapper {
+    overflow-y: unset;
     width: 100%;
+    height: auto;
+  }
+}
+main .wrapper .about-content {
+  padding: 40px;
+}
+main .wrapper .about-content p {
+  padding: 10px 0;
+}
+
+.headshot {
+  width: 40%;
+  height: calc(100vh - 200px);
+  padding: 40px;
+  padding-right: 0;
+}
+.headshot img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 970px) {
+  .headshot {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    padding: 0;
   }
 }

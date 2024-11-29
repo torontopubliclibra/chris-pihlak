@@ -9,56 +9,47 @@
 
 // font import
 @font-face {
-  font-family: "Motterdam";
-  src: url(/assets/fonts/Motterdam/Motterdam.ttf) format("truetype");
+  font-family: "Fraunces";
+  src: url(/assets/fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format("truetype");
   font-display: swap;
 }
 
 // font variables
 $font1: 'Crimson Pro',
 serif;
-$font2: 'Motterdam', serif;
+$font2: 'Fraunces', serif;
 
+// default typography
 html {
   font-size: 20px;
-  letter-spacing: 0.4px;
   font-weight: 400;
 
   @media only screen and (max-width: $mobile) {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
-// a {
-//   color: $black;
-//   transition: color 1s;
+// hyperlinks
+a {
+  font-style: normal;
+  color: $black;
+  transition: color 1s, font-style 1s;
 
-//   &:hover {
-//     transition: color 1s;
-//     color: $color1;
-//   }
+  &:hover {
+    font-style: italic;
+    transition: color 1s, font-style 1s;
+    color: $color2;
+  }
 
-//   @media only screen and (max-width: $mobile) {
-//     &:hover {
-//       color: $black;
-//     }
-//   }
-// }
-
-// hr {
-//   background-color: rgba($color1, 0.8);
-//   border-style: solid;
-//   border-color: rgba($color1, 0.8);
-//   border-width: 2px;
-//   box-shadow: none;
-//   width: 1000px;
-//   width: 90%;
-// }
-
-input, textarea, label {
-  font-family: $font1;
+  @media only screen and (max-width: $mobile) {
+    &:hover {
+      color: $black;
+      font-style: normal;
+    }
+  }
 }
 
+// body text
 body {
   text-align: left;
   font-size: 1rem;
@@ -69,53 +60,58 @@ body {
   }
 }
 
+// headings
 h1, h2, h3, h4 {
+  font-family: $font2;
   font-weight: 500;
   padding: 0;
   margin: 0;
 }
 
-.button {
-  font-size: 1rem;
-  text-align: center;
-  font-family: $font1;
-  text-decoration: none;
-  color: $white;
-}
+h1 {
+  color: $black;
+  font-size: 1.8rem;
+  line-height: 0.9;
 
-header {
-  .heading {
-    h1 {
-      font-family: $font2;
-      font-size: 6rem;
-      font-weight: 400;
-      color: $black;
-      line-height: 0.9;
-      margin-top: 20px;
-    }
-    h2 {
-      color: $color1;
-      padding: 20px 0;
-      padding-bottom: 0;
-      font-style: italic;
-      font-family: $font1;
-      font-size: 2rem;
-      font-weight: 400;
-    }
-    h3 {
-      color: $color1;
-      padding: 20px 0;
-      padding-bottom: 0;
-      font-style: italic;
-      font-family: $font1;
-      font-size: 1.5rem;
-      font-weight: 400;
-    }
+  // responsive to tablet
+  @media only screen and (max-width: $tablet) {
+    font-size: 3rem;
+  }
+
+  // responsive to mobile
+  @media only screen and (max-width: $mobile) {
+    font-size: 2.25rem;
   }
 }
 
-.about {
-  margin-bottom: 50px;
+h2 {
+  padding-bottom: 20px;
+  font-style: italic;
+  font-size: 1.5rem;
+
+  // responsive to tablet
+  @media only screen and (max-width: $tablet) {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  // responsive to mobile
+  @media only screen and (max-width: $mobile) {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
+
+// footer typography
+footer {
+  color: $black;
+  font-family: $font1;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+// main typography
+main {
   p {
     font-family: $font1;
     padding: 0;
@@ -126,63 +122,9 @@ header {
     &:last-of-type {
       padding-bottom: 0;
     }
-  }
-}
 
-footer {
-  color: $black;
-  font-family: $font1;
-  font-weight: 400;
-  font-size: 0.9rem;
-}
-
-// responsive to tablet
-@media only screen and (max-width: $tablet) {
-  header {
-    .heading {
-      h1 {
-        font-size: 6rem;
-      }
-    }
-  }
-}
-
-// responsive to mobile
-@media only screen and (max-width: $mobile) {
-  header {
-    .heading {
-      h1 {
-        font-size: 4rem;
-        padding: 0 20px;
-      }
-      h2 {
-        padding: 20px;
-        padding-bottom: 15px;
-        font-size: 1.5rem;
-      }
-      h3 {
-        padding: 0 20px;
-        font-size: 1.25rem;
-      }
-    }
-  }
-  .about {
-    p {
-      margin: 0;
-      padding-bottom: 20px;
-
-      &:last-of-type {
-        padding-bottom: 0;
-      }
-    }
-  }
-  footer {
-    a:hover {
-      color: $black;
-    }
-    p {
-      max-width: 95%;
-      margin: 0 auto;
+    @media only screen and (max-width: $tablet) {
+      text-align: center;
     }
   }
 }
