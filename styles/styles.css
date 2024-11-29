@@ -275,7 +275,7 @@ html {
   font-size: 20px;
   font-weight: 400;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   html {
     font-size: 18px;
   }
@@ -293,7 +293,7 @@ a:hover {
   transition: color 1s, font-style 1s;
   color: #c05b6f;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   a:hover {
     color: #28272A;
     font-style: normal;
@@ -328,9 +328,9 @@ h1 {
     font-size: 2rem;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   h1 {
-    font-size: 1.75rem;
+    font-size: 1.9rem;
     line-height: 1.25;
   }
 }
@@ -346,7 +346,7 @@ h2 {
     text-align: center;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   h2 {
     font-size: 1.25rem;
     text-align: center;
@@ -359,8 +359,22 @@ header, footer {
   font-weight: 500;
 }
 
+header {
+  font-size: 1.1rem;
+}
+@media only screen and (max-width: 600px) {
+  header {
+    font-size: 1.25rem;
+  }
+}
+
 footer {
   font-size: 0.9rem;
+}
+@media only screen and (max-width: 600px) {
+  footer {
+    font-size: 1rem;
+  }
 }
 
 main p {
@@ -395,7 +409,7 @@ body {
   width: 90%;
   margin: 0 auto;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .wrapper {
     width: 95%;
   }
@@ -421,7 +435,7 @@ header .banner {
   padding: 40px;
   margin: 0;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   header .banner {
     justify-content: space-between;
   }
