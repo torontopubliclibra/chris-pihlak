@@ -122,6 +122,7 @@ main {
     box-shadow: rgba($black, 0.1) 5px 0px 20px 5px inset;
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     margin: 0;
 
     @media only screen and (max-width: $tablet) {
@@ -131,15 +132,24 @@ main {
 
     .wrapper {
         width: calc(60%);
+        max-width: 1200px;
+        margin: 0;
         height: calc(100vh - 200px);
         overflow-y: scroll;
         justify-content: center;
         gap: 25px;
         
+        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             overflow-y: unset;
             width: 100%;
             height: auto;
+        }
+
+        // screens shorter than 600px
+        @media only screen and (max-height: 600px)and (min-width: $tablet) {
+            height: auto;
+            overflow-y: unset;
         }
 
         .about-content {
@@ -159,7 +169,9 @@ main {
 // headshot image
 .headshot {
     width: 40%;
+    max-width: 860px;
     height: calc(100vh - 200px);
+    max-height: 900px;
     padding: 40px;
     padding-right: 0;
 
@@ -171,10 +183,20 @@ main {
         height: 100%;
     }
 
+    // screens shorter than 600px
+    @media only screen and (max-height: 600px)and (min-width: $tablet) {
+        height: auto;
+
+        img {
+            height: auto;
+        }
+    }
+
     @media only screen and (max-width: $tablet) {
         width: 100%;
         height: auto;
-        max-height: 600px;
+        max-height: 500px;
+        max-width: unset;
         padding: 0;
 
         img {
