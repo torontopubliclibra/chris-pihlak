@@ -31,9 +31,11 @@ html {
 
 // hyperlinks
 a {
+  text-decoration: none;
   font-style: normal;
   color: $black;
   transition: color 1s, font-style 1s;
+  border-bottom: solid rgba($color2, 0.2) 2px;
 
   &:hover {
     font-style: italic;
