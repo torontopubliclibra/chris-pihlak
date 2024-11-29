@@ -312,18 +312,18 @@ h1, h2, h3, h4 {
 
 h1 {
   color: #28272A;
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   line-height: 0.9;
   text-align: center;
 }
 @media only screen and (max-width: 970px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 1.25;
   }
 }
@@ -346,10 +346,13 @@ h2 {
   }
 }
 
-footer {
+header, footer {
   color: #28272A;
   font-family: "Crimson Pro", serif;
-  font-weight: 400;
+  font-weight: 500;
+}
+
+footer {
   font-size: 0.9rem;
 }
 
@@ -418,7 +421,7 @@ header .banner {
 @media only screen and (max-width: 970px) {
   header {
     height: auto;
-    padding: 10px;
+    padding: 0;
   }
   header .banner {
     flex-direction: column-reverse;
@@ -444,6 +447,10 @@ footer .wrapper {
 }
 footer .wrapper p {
   margin: 0;
+}
+footer .wrapper .counter {
+  height: 20px;
+  width: auto;
 }
 @media only screen and (max-width: 970px) {
   footer {
@@ -485,6 +492,11 @@ main .wrapper .about-content {
 }
 main .wrapper .about-content p {
   padding: 10px 0;
+}
+@media only screen and (max-width: 970px) {
+  main .wrapper .about-content {
+    padding: 20px;
+  }
 }
 
 .headshot {
