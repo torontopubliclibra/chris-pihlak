@@ -260,6 +260,11 @@ hr, p, img, ul, li, a, blockquote, form, input, textarea, button, label, select,
   src: url(/assets/fonts/Crimson_Pro/CrimsonPro-VariableFont_wght.ttf) format("truetype");
   font-display: swap;
 }
+@font-face {
+  font-family: "Motterdam";
+  src: url(/assets/fonts/Motterdam/Motterdam.ttf) format("truetype");
+  font-display: swap;
+}
 html {
   font-size: 20px;
   letter-spacing: 0.4px;
@@ -269,16 +274,6 @@ html {
   html {
     font-size: 16px;
   }
-}
-
-hr {
-  background-color: rgba(128, 84, 117, 0.8);
-  border-style: solid;
-  border-color: rgba(128, 84, 117, 0.8);
-  border-width: 2px;
-  box-shadow: none;
-  width: 1000px;
-  width: 90%;
 }
 
 input, textarea, label {
@@ -310,10 +305,12 @@ h1, h2, h3, h4 {
 }
 
 header .heading h1 {
-  font-size: 5rem;
+  font-family: "Motterdam", serif;
+  font-size: 6rem;
   font-weight: 400;
   color: #28272A;
   line-height: 0.9;
+  margin-top: 20px;
 }
 header .heading h2 {
   color: #805475;
@@ -321,7 +318,7 @@ header .heading h2 {
   padding-bottom: 0;
   font-style: italic;
   font-family: "Crimson Pro", serif;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 header .heading h3 {
@@ -343,9 +340,6 @@ header .heading h3 {
   padding-bottom: 20px;
   margin: 0;
   line-height: 1.75;
-}
-.about p:first-of-type {
-  padding-top: 10px;
 }
 .about p:last-of-type {
   padding-bottom: 0;
@@ -453,9 +447,9 @@ textarea {
   background: none;
   border: dashed #28272A 2px;
   width: 100%;
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .headshot {
@@ -545,8 +539,11 @@ header {
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 header .banner {
+  background-color: rgba(128, 84, 117, 0.15);
+  box-shadow: rgba(40, 39, 42, 0.12) 0px 2px 4px 0px, rgba(40, 39, 42, 0.32) 0px 2px 16px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -554,7 +551,7 @@ header .banner {
   gap: 20px;
   width: 100%;
   padding: 40px;
-  padding-bottom: 20px;
+  margin-bottom: 40px;
 }
 @media only screen and (max-width: 768px) {
   header .banner {

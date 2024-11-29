@@ -7,9 +7,17 @@
   font-display: swap;
 }
 
+// font import
+@font-face {
+  font-family: "Motterdam";
+  src: url(/assets/fonts/Motterdam/Motterdam.ttf) format("truetype");
+  font-display: swap;
+}
+
 // font variables
 $font1: 'Crimson Pro',
 serif;
+$font2: 'Motterdam', serif;
 
 html {
   font-size: 20px;
@@ -37,15 +45,15 @@ html {
 //   }
 // }
 
-hr {
-  background-color: rgba($color1, 0.8);
-  border-style: solid;
-  border-color: rgba($color1, 0.8);
-  border-width: 2px;
-  box-shadow: none;
-  width: 1000px;
-  width: 90%;
-}
+// hr {
+//   background-color: rgba($color1, 0.8);
+//   border-style: solid;
+//   border-color: rgba($color1, 0.8);
+//   border-width: 2px;
+//   box-shadow: none;
+//   width: 1000px;
+//   width: 90%;
+// }
 
 input, textarea, label {
   font-family: $font1;
@@ -78,10 +86,12 @@ h1, h2, h3, h4 {
 header {
   .heading {
     h1 {
-      font-size: 5rem;
+      font-family: $font2;
+      font-size: 6rem;
       font-weight: 400;
       color: $black;
       line-height: 0.9;
+      margin-top: 20px;
     }
     h2 {
       color: $color1;
@@ -89,7 +99,7 @@ header {
       padding-bottom: 0;
       font-style: italic;
       font-family: $font1;
-      font-size: 1.75rem;
+      font-size: 2rem;
       font-weight: 400;
     }
     h3 {
@@ -112,10 +122,6 @@ header {
     padding-bottom: 20px;
     margin: 0;
     line-height: 1.75;
-
-    &:first-of-type {
-      padding-top: 10px;
-    }
 
     &:last-of-type {
       padding-bottom: 0;

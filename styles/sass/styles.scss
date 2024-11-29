@@ -65,9 +65,9 @@ textarea {
             background: none;
             border: dashed $black 2px;
             width: 100%;
-            margin: 20px 0;
+            margin: 10px 0;
             padding: 0;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
     }
 }
@@ -163,9 +163,10 @@ header {
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
     .banner {
-        // background-color: rgba($color1, 0.15);
-        // box-shadow: rgba($black, 0.12) 0px 2px 4px 0px, rgba($black, 0.32) 0px 2px 16px 0px;
+        background-color: rgba($color1, 0.15);
+        box-shadow: rgba($black, 0.12) 0px 2px 4px 0px, rgba($black, 0.32) 0px 2px 16px 0px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -173,7 +174,7 @@ header {
         gap: 20px;
         width: 100%;
         padding: 40px;
-        padding-bottom: 20px;
+        margin-bottom: 40px;
 
         @media only screen and (max-width: $mobile) {
             justify-content: space-between;
