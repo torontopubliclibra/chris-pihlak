@@ -249,18 +249,21 @@ html {
   }
 }
 main * {
-  animation: fade-up 1s;
+  animation: fade-up 1.5s;
 }
 
 header *, footer * {
   animation: fade-in 1s;
 }
+
 @media only screen and (max-width: 970px) {
-  header *, footer * {
-    animation: fade-up 1s;
+  header *, main *, footer * {
+    animation: fade-up 1.5s;
+  }
+  .headshot, .headshot * {
+    animation: fade-in 1s;
   }
 }
-
 @font-face {
   font-family: "Crimson Pro";
   src: url(/assets/fonts/Crimson_Pro/CrimsonPro-VariableFont_wght.ttf) format("truetype");
@@ -394,7 +397,7 @@ main p:last-of-type {
 }
 
 html {
-  background-color: #FDFCFD;
+  background-color: #f9f5f9;
   background-image: url("../../assets/bg.png");
   background-blend-mode: luminosity;
 }
@@ -440,6 +443,12 @@ header .banner {
     justify-content: space-between;
   }
 }
+header .banner .header-link:first-of-type {
+  order: -2;
+}
+header .banner .header-link:nth-of-type(2) {
+  order: -1;
+}
 @media only screen and (max-width: 970px) {
   header {
     height: auto;
@@ -450,8 +459,14 @@ header .banner {
     flex-direction: column-reverse;
   }
   header .banner h1 {
-    order: 6;
     padding-bottom: 10px;
+    order: 6;
+  }
+  header .banner .header-link:first-of-type {
+    order: unset;
+  }
+  header .banner .header-link:nth-of-type(2) {
+    order: unset;
   }
 }
 
@@ -478,7 +493,7 @@ footer .wrapper .counter {
 @media only screen and (max-width: 970px) {
   footer {
     height: auto;
-    padding: 40px;
+    padding: 20px;
   }
   footer .wrapper {
     flex-direction: column;
@@ -548,6 +563,5 @@ main .wrapper .about-content p {
     border-radius: 0;
     border: none;
     box-shadow: none;
-    border-bottom: solid rgba(167, 120, 171, 0.2) 2px;
   }
 }

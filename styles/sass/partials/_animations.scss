@@ -25,13 +25,21 @@
 }
 
 main * {
-    animation: fade-up 1s;
+    animation: fade-up 1.5s;
 }
 
 header *, footer * {
     animation: fade-in 1s;
+}
 
-    @media only screen and (max-width: $tablet) {
-        animation: fade-up 1s;
+@media only screen and (max-width: $tablet) {
+   
+    header *, main *, footer * {
+        animation: fade-up 1.5s;
     }
+
+    .headshot, .headshot * {
+        animation: fade-in 1s;
+    }
+
 }

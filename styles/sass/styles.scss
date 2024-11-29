@@ -51,6 +51,14 @@ header {
         @media only screen and (max-width: $mobile) {
             justify-content: space-between;
         }
+
+        .header-link:first-of-type {
+            order: -2;
+        }
+
+        .header-link:nth-of-type(2) {
+            order: -1;
+        }
     }
 
     @media only screen and (max-width: $tablet) {
@@ -62,8 +70,16 @@ header {
             flex-direction: column-reverse;
 
             h1 {
-                order: 6;
                 padding-bottom: 10px;
+                order: 6;
+            }
+
+            .header-link:first-of-type {
+                order: unset;
+            }
+    
+            .header-link:nth-of-type(2) {
+                order: unset;
             }
         }
     }
@@ -94,7 +110,7 @@ footer {
 
     @media only screen and (max-width: $tablet) {
         height: auto;
-        padding: 40px;
+        padding: 20px;
 
         .wrapper {
             flex-direction: column;
@@ -166,7 +182,6 @@ main {
             border-radius: 0;
             border: none;
             box-shadow: none;
-            border-bottom: solid rgba($color1, 0.2) 2px;
         }
     }
 }
