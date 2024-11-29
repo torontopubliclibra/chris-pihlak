@@ -230,6 +230,16 @@ html {
   overflow: hidden;
 }
 
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -238,20 +248,11 @@ html {
     opacity: 1;
   }
 }
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-h1, h2, h3, h4 {
-  animation: fade-in 1s;
-  font-weight: 500;
+main * {
+  animation: fade-up 1s;
 }
 
-hr, p, img, ul, li, a, blockquote, form, input, textarea, button, label, select, option, table, th, td {
+header *, footer * {
   animation: fade-in 1s;
 }
 
