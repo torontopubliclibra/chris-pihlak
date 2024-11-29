@@ -271,28 +271,10 @@ html {
   }
 }
 
-a {
-  color: #28272A;
-  font-style: normal;
-}
-a:hover {
-  transition: color 1s, font-style 1s;
-  font-style: italic;
-  color: #775b79;
-}
-@media only screen and (max-width: 768px) {
-  a {
-    font-style: italic;
-  }
-  a:hover {
-    color: #28272A;
-  }
-}
-
 hr {
-  background-color: rgba(119, 91, 121, 0.8);
+  background-color: rgba(128, 84, 117, 0.8);
   border-style: solid;
-  border-color: rgba(119, 91, 121, 0.8);
+  border-color: rgba(128, 84, 117, 0.8);
   border-width: 2px;
   box-shadow: none;
   width: 1000px;
@@ -304,6 +286,7 @@ input, textarea, label {
 }
 
 body {
+  text-align: left;
   font-size: 1rem;
   font-family: "Crimson Pro", serif;
   color: #28272A;
@@ -319,59 +302,60 @@ h1, h2, h3, h4 {
 }
 
 .button {
+  font-size: 1rem;
+  text-align: center;
   font-family: "Crimson Pro", serif;
   text-decoration: none;
-  color: #dcd7dd;
+  color: #f4e8e5;
 }
 
-header {
-  padding-top: 10px;
-}
-header .heading {
-  text-align: center;
-}
 header .heading h1 {
-  font-size: 8rem;
+  font-size: 5rem;
   font-weight: 400;
-  color: #775b79;
+  color: #28272A;
   line-height: 0.9;
 }
 header .heading h2 {
-  padding: 20px;
+  color: #805475;
+  padding: 20px 0;
   padding-bottom: 0;
   font-style: italic;
   font-family: "Crimson Pro", serif;
   font-size: 1.75rem;
   font-weight: 400;
 }
+header .heading h3 {
+  color: #805475;
+  padding: 20px 0;
+  padding-bottom: 0;
+  font-style: italic;
+  font-family: "Crimson Pro", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
 
 .about {
   margin-bottom: 50px;
 }
-.about .cv-download {
-  color: #28272A;
-  background-color: rgba(255, 119, 88, 0.75);
-  margin: 0 auto;
-  display: block;
-  max-width: 350px;
-}
-.about p, .about a {
+.about p {
   font-family: "Crimson Pro", serif;
-  padding: 10px;
+  padding: 0;
+  padding-bottom: 20px;
   margin: 0;
   line-height: 1.75;
+}
+.about p:first-of-type {
+  padding-top: 10px;
+}
+.about p:last-of-type {
+  padding-bottom: 0;
 }
 
 footer {
   color: #28272A;
   font-family: "Crimson Pro", serif;
   font-weight: 400;
-}
-footer a {
-  color: #28272A;
-}
-footer a:hover {
-  color: #775b79;
+  font-size: 0.9rem;
 }
 
 @media only screen and (max-width: 970px) {
@@ -382,15 +366,23 @@ footer a:hover {
 @media only screen and (max-width: 768px) {
   header .heading h1 {
     font-size: 4rem;
+    padding: 0 20px;
   }
   header .heading h2 {
     padding: 20px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     font-size: 1.5rem;
+  }
+  header .heading h3 {
+    padding: 0 20px;
+    font-size: 1.25rem;
   }
   .about p {
     margin: 0;
     padding-bottom: 20px;
+  }
+  .about p:last-of-type {
+    padding-bottom: 0;
   }
   footer a:hover {
     color: #28272A;
@@ -401,12 +393,11 @@ footer a:hover {
   }
 }
 html {
-  background-color: #dcd7dd;
+  background-color: #f4e8e5;
   background-size: cover;
 }
 
 body {
-  text-align: center;
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
@@ -418,7 +409,7 @@ body {
 }
 
 input, textarea {
-  background-color: #dcd7dd;
+  background-color: #f4e8e5;
   border: none;
   padding: 10px 15px;
 }
@@ -431,6 +422,11 @@ textarea {
   margin: 0;
   padding-top: 20px;
   padding-bottom: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .about {
+    padding-top: 0;
+  }
 }
 .about .wrapper {
   display: flex;
@@ -449,8 +445,17 @@ textarea {
   .about .about-content {
     padding: 20px;
     padding-top: 0;
+    padding-bottom: 0;
     width: 100%;
   }
+}
+.about .about-content hr {
+  background: none;
+  border: dashed #28272A 2px;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+  margin-bottom: 40px;
 }
 
 .headshot {
@@ -460,7 +465,7 @@ textarea {
   padding-top: 0;
 }
 .headshot img {
-  border: solid rgba(119, 91, 121, 0.5) 10px;
+  box-shadow: rgba(40, 39, 42, 0.12) 0px 2px 4px 0px, rgba(40, 39, 42, 0.32) 0px 2px 16px 0px;
   width: 100%;
 }
 @media only screen and (max-width: 768px) {
@@ -478,55 +483,97 @@ textarea {
 }
 
 .button {
-  font-style: normal;
+  align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: rgba(128, 84, 117, 0.15);
+  border-width: 0;
+  box-shadow: rgba(40, 39, 42, 0.4) 0 2px 4px, rgba(40, 39, 42, 0.3) 0 7px 13px -3px, rgba(128, 84, 117, 0.05) 0 -3px 0 inset;
+  box-sizing: border-box;
   color: #28272A;
-  background-color: rgba(220, 215, 221, 0.8);
-  padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.5s, font-style 0.5s;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  font-size: 0.9rem;
+  line-height: 1;
+  font-weight: 500;
+  list-style: none;
+  overflow: hidden;
+  padding: 5px 30px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.4s, transform 0.4s;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  gap: 10px;
+}
+.button:focus {
+  box-shadow: rgba(128, 84, 117, 0.05) 0 0 0 1.5px inset, rgba(40, 39, 42, 0.4) 0 2px 4px, rgba(40, 39, 42, 0.3) 0 7px 13px -3px, rgba(128, 84, 117, 0.25) 0 -3px 0 inset;
 }
 .button:hover {
-  font-style: italic;
+  box-shadow: rgba(40, 39, 42, 0.4) 0 4px 8px, rgba(40, 39, 42, 0.3) 0 7px 13px -3px, rgba(128, 84, 117, 0.05) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+.button:active {
+  box-shadow: rgba(40, 39, 42, 0.4) 0 2px 4px, rgba(40, 39, 42, 0.3) 0 7px 13px -3px, rgba(128, 84, 117, 0.05) 0 -3px 0 inset;
+  transform: translateY(2px);
+}
+.button .icon {
+  width: 18px;
 }
 @media only screen and (max-width: 768px) {
-  .button:hover {
-    font-style: normal;
+  .button {
+    padding: 5px 20px;
   }
-}
-.button.scroll-to-top {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  margin-bottom: 10px;
-}
-.button.scroll-to-top img {
-  width: 20px;
+  .button .button-label {
+    display: none;
+  }
 }
 
 header {
-  background-color: rgba(220, 215, 221, 0.9);
+  background-color: rgba(244, 232, 229, 0.9);
   height: auto;
   height: auto;
   display: flex;
+  flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
+}
+header .banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 40px;
+  padding-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  header .banner {
+    justify-content: space-between;
+  }
 }
 header .title {
   width: 100%;
   max-width: 1260px;
   padding-top: 10px;
+  margin: 0;
 }
 
 section {
-  background-color: rgba(220, 215, 221, 0.9);
+  background-color: rgba(244, 232, 229, 0.9);
 }
 
 footer {
-  background-color: rgba(255, 119, 88, 0.75);
-  padding: 40px 0;
+  padding: 40px;
 }
 footer .wrapper {
   display: flex;
@@ -537,6 +584,9 @@ footer .wrapper {
 }
 footer .wrapper p {
   margin: 0;
+}
+footer .button {
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 768px) {

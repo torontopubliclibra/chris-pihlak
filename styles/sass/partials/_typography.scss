@@ -21,23 +21,21 @@ html {
   }
 }
 
-a {
-  color: $black;
-  font-style: normal;
+// a {
+//   color: $black;
+//   transition: color 1s;
 
-  &:hover {
-    transition: color 1s, font-style 1s;
-    font-style: italic;
-    color: $color1;
-  }
+//   &:hover {
+//     transition: color 1s;
+//     color: $color1;
+//   }
 
-  @media only screen and (max-width: $mobile) {
-    font-style: italic;
-    &:hover {
-      color: $black;
-    }
-  }
-}
+//   @media only screen and (max-width: $mobile) {
+//     &:hover {
+//       color: $black;
+//     }
+//   }
+// }
 
 hr {
   background-color: rgba($color1, 0.8);
@@ -54,6 +52,7 @@ input, textarea, label {
 }
 
 body {
+  text-align: left;
   font-size: 1rem;
   font-family: $font1;
   color: $black;
@@ -69,27 +68,37 @@ h1, h2, h3, h4 {
 }
 
 .button {
+  font-size: 1rem;
+  text-align: center;
   font-family: $font1;
   text-decoration: none;
   color: $white;
 }
 
 header {
-  padding-top: 10px;
   .heading {
-    text-align: center;
     h1 {
-      font-size: 8rem;
+      font-size: 5rem;
       font-weight: 400;
-      color: $color1;
+      color: $black;
       line-height: 0.9;
     }
     h2 {
-      padding: 20px;
+      color: $color1;
+      padding: 20px 0;
       padding-bottom: 0;
       font-style: italic;
       font-family: $font1;
       font-size: 1.75rem;
+      font-weight: 400;
+    }
+    h3 {
+      color: $color1;
+      padding: 20px 0;
+      padding-bottom: 0;
+      font-style: italic;
+      font-family: $font1;
+      font-size: 1.5rem;
       font-weight: 400;
     }
   }
@@ -97,18 +106,20 @@ header {
 
 .about {
   margin-bottom: 50px;
-  .cv-download {
-    color: $black;
-    background-color: rgba($color2, 0.75);
-    margin: 0 auto;
-    display: block;
-    max-width: 350px;
-  }
-  p, a {
+  p {
     font-family: $font1;
-    padding: 10px;
+    padding: 0;
+    padding-bottom: 20px;
     margin: 0;
     line-height: 1.75;
+
+    &:first-of-type {
+      padding-top: 10px;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -116,14 +127,7 @@ footer {
   color: $black;
   font-family: $font1;
   font-weight: 400;
-
-  a {
-    color: $black;
-
-    &:hover {
-      color: $color1;
-    }
-  }
+  font-size: 0.9rem;
 }
 
 // responsive to tablet
@@ -143,11 +147,16 @@ footer {
     .heading {
       h1 {
         font-size: 4rem;
+        padding: 0 20px;
       }
       h2 {
         padding: 20px;
-        padding-bottom: 5px;
+        padding-bottom: 15px;
         font-size: 1.5rem;
+      }
+      h3 {
+        padding: 0 20px;
+        font-size: 1.25rem;
       }
     }
   }
@@ -155,6 +164,10 @@ footer {
     p {
       margin: 0;
       padding-bottom: 20px;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
     }
   }
   footer {
