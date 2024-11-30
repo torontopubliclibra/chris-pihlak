@@ -545,14 +545,14 @@ main .wrapper {
     overflow-y: unset;
   }
 }
-main .wrapper .about-content {
+main .wrapper .main-content {
   padding: 40px;
 }
-main .wrapper .about-content p {
+main .wrapper .main-content p {
   padding: 10px 0;
 }
 @media only screen and (max-width: 970px) {
-  main .wrapper .about-content {
+  main .wrapper .main-content {
     padding: 20px;
   }
 }
