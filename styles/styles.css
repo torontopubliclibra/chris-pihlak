@@ -330,7 +330,7 @@ h1 {
 }
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 11vw;
+    font-size: 9vw;
   }
 }
 
@@ -349,6 +349,7 @@ h2 {
 @media only screen and (max-width: 600px) {
   h2 {
     text-align: center;
+    font-size: 1.25rem;
   }
 }
 
@@ -461,6 +462,7 @@ header .banner .header-link:nth-of-type(2) {
     flex-flow: row wrap;
   }
   header .banner h1 {
+    order: -1;
     width: 100%;
   }
   header .banner .header-link:first-of-type {
@@ -582,8 +584,7 @@ main .wrapper .about-content p {
 @media only screen and (max-width: 970px) {
   .headshot {
     width: 100%;
-    height: auto;
-    max-height: 450px;
+    height: 450px;
     max-width: unset;
     padding: 0;
   }
