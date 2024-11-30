@@ -319,18 +319,18 @@ h1, h2, h3, h4 {
 
 h1 {
   color: #28272A;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   text-align: center;
 }
 @media only screen and (max-width: 970px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-bottom: 5px;
   }
 }
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 1.9rem;
+    font-size: 11vw;
   }
 }
 
@@ -348,7 +348,6 @@ h2 {
 }
 @media only screen and (max-width: 600px) {
   h2 {
-    font-size: 1.25rem;
     text-align: center;
   }
 }
@@ -362,10 +361,8 @@ header, footer {
 header {
   font-size: 1.1rem;
 }
-@media only screen and (max-width: 600px) {
-  header {
-    font-size: 1.25rem;
-  }
+header .header-link {
+  text-align: center;
 }
 
 footer {
@@ -448,21 +445,36 @@ header .banner .header-link:nth-of-type(2) {
 }
 @media only screen and (max-width: 970px) {
   header {
+    z-index: 10;
+    background-color: #f9f5f9;
+    background-image: url("../../assets/bg.png");
+    box-shadow: rgba(40, 39, 42, 0.1) 5px 20px 20px 5px;
+    position: sticky;
+    top: 0;
     height: auto;
     padding: 0;
   }
   header .banner {
+    background-color: rgba(167, 120, 171, 0.2);
     padding: 25px;
-    flex-direction: column-reverse;
+    padding-bottom: 30px;
+    flex-flow: row wrap;
   }
   header .banner h1 {
-    order: 6;
+    width: 100%;
   }
   header .banner .header-link:first-of-type {
     order: unset;
   }
   header .banner .header-link:nth-of-type(2) {
     order: unset;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header .banner .header-link {
+    width: calc(50% - 10px);
+    padding: 5px 0;
+    margin-bottom: 5px;
   }
 }
 
@@ -497,7 +509,7 @@ footer .wrapper .counter {
 }
 
 main {
-  box-shadow: rgba(40, 39, 42, 0.1) 5px 0px 20px 5px inset;
+  box-shadow: rgba(40, 39, 42, 0.1) 5px 5px 20px 5px inset;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -553,7 +565,7 @@ main .wrapper .about-content p {
 }
 .headshot img {
   box-shadow: rgba(40, 39, 42, 0.1) 0px 2px 4px 0px, rgba(40, 39, 42, 0.2) 0px 2px 16px 0px;
-  border-radius: 20px;
+  border-radius: 25px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -571,7 +583,7 @@ main .wrapper .about-content p {
   .headshot {
     width: 100%;
     height: auto;
-    max-height: 500px;
+    max-height: 450px;
     max-width: unset;
     padding: 0;
   }
@@ -583,6 +595,6 @@ main .wrapper .about-content p {
 }
 @media only screen and (max-width: 600px) {
   .headshot {
-    max-height: 400px;
+    max-height: 350px;
   }
 }

@@ -72,18 +72,18 @@ h1, h2, h3, h4 {
 
 h1 {
   color: $black;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   text-align: center;
 
   // responsive to tablet
   @media only screen and (max-width: $tablet) {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-bottom: 5px;
   }
 
   // responsive to mobile
   @media only screen and (max-width: $mobile) {
-    font-size: 1.9rem;
+    font-size: 11vw;
   }
 }
 
@@ -101,7 +101,6 @@ h2 {
 
   // responsive to mobile
   @media only screen and (max-width: $mobile) {
-    font-size: 1.25rem;
     text-align: center;
   }
 }
@@ -116,8 +115,8 @@ header, footer {
 header {
   font-size: 1.1rem;
 
-  @media only screen and (max-width: $mobile) {
-    font-size: 1.25rem;
+  .header-link {
+    text-align: center;
   }
 }
 
