@@ -31,7 +31,7 @@ body {
 
 // header styles
 header {
-    background-color: rgba($color1, 0.2);
+    background-color: rgba($color1, 0.3);
     height: 125px;
     display: flex;
     flex-flow: column wrap;
@@ -72,7 +72,7 @@ header {
         padding: 0;
 
         .banner {
-            background-color: rgba($color1, 0.2);
+            background-color: rgba($color1, 0.3);
             padding: 25px;
             padding-bottom: 30px;
             flex-flow: row wrap;
@@ -106,7 +106,7 @@ header {
 
 // footer styles
 footer {
-    background-color: rgba($color1, 0.2);
+    background-color: rgba($color1, 0.3);
     height: 75px;
     padding: 0 40px;
     .wrapper {
@@ -120,16 +120,11 @@ footer {
         p {
             margin: 0;
         }
-
-        .counter {
-            height: 20px;
-            width: auto;
-        }
     }
 
     @media only screen and (max-width: $tablet) {
         height: auto;
-        padding: 20px;
+        padding: 25px;
 
         .wrapper {
             flex-direction: column;
