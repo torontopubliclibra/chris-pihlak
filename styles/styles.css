@@ -293,7 +293,7 @@ a:hover {
   transition: color 1s, font-style 1s;
   color: #c05b6f;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 970px) {
   a:hover {
     color: #28272A;
     font-style: normal;
@@ -415,7 +415,7 @@ body {
 }
 
 header {
-  background-color: rgba(167, 120, 171, 0.2);
+  background-color: rgba(167, 120, 171, 0.3);
   height: 125px;
   display: flex;
   flex-flow: column wrap;
@@ -456,7 +456,7 @@ header .banner .header-link:nth-of-type(2) {
     padding: 0;
   }
   header .banner {
-    background-color: rgba(167, 120, 171, 0.2);
+    background-color: rgba(167, 120, 171, 0.3);
     padding: 25px;
     padding-bottom: 30px;
     flex-flow: row wrap;
@@ -481,7 +481,7 @@ header .banner .header-link:nth-of-type(2) {
 }
 
 footer {
-  background-color: rgba(167, 120, 171, 0.2);
+  background-color: rgba(167, 120, 171, 0.3);
   height: 75px;
   padding: 0 40px;
 }
@@ -496,14 +496,10 @@ footer .wrapper {
 footer .wrapper p {
   margin: 0;
 }
-footer .wrapper .counter {
-  height: 20px;
-  width: auto;
-}
 @media only screen and (max-width: 970px) {
   footer {
     height: auto;
-    padding: 20px;
+    padding: 25px;
   }
   footer .wrapper {
     flex-direction: column;
